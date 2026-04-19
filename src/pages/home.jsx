@@ -54,6 +54,16 @@ export default function Home() {
   const [results, setResults] = useState([]);
   const [comparisons, setComparisons] = useState([]);
 
+  const isFavorited = (item) => favorites.some(f => f.title === item.title && f.store === item.store);
+  const handleToggleFavorite = (item) => {
+    setFavorites(prev =>
+      isFavorited(item) ? prev.filter(f => !(f.title === item.title && f.store === item.store)) : [...prev, item]
+    );
+  };
+  const handleViewDetails = (result) => {
+    console.log('View details:', result);
+  };
+
   const handleSearch = (query) => {
     const newResults = generateMockResults(query);
     const newComparisons = generateComparisons(query);
@@ -64,13 +74,16 @@ export default function Home() {
   return (
     <div className="home-layout">
       <Header />
-      
       <div className="main-content">
         <div className="content-left">
           <SearchBar onSearch={handleSearch} />
-          <ResponseTileGrid results={results} />
+          <ResponseTileGrid
+            results={results}
+            onViewDetails={handleViewDetails}       // ADD THIS
+            isFavorited={isFavorited}               // ADD THIS
+            onToggleFavorite={handleToggleFavorite} // ADD THIS
+          />
         </div>
-        
         <PricingList comparisons={comparisons} />
       </div>
     </div>
