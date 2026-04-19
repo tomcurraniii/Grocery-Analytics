@@ -1,4 +1,4 @@
-import './styles/globals.css';
+import './styles/global.css';
 import './App.css';
 import Home from './pages/Home';
 
