@@ -79,9 +79,9 @@ export default function Home() {
           <SearchBar onSearch={handleSearch} />
           <ResponseTileGrid
             results={results}
-            onViewDetails={handleViewDetails}       // ADD THIS
-            isFavorited={isFavorited}               // ADD THIS
-            onToggleFavorite={handleToggleFavorite} // ADD THIS
+            onViewDetails={handleViewDetails}        
+            isFavorited={isFavorited}                
+            onToggleFavorite={handleToggleFavorite}  
           />
         </div>
         <PricingList comparisons={comparisons} />
