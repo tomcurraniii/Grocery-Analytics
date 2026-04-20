@@ -1,5 +1,5 @@
-import PricingCard from './PricingCard';
-import './Pricing.css';
+import PricingCard from './pricingcard';
+import './pricing.css';
 
 export default function PricingList({ comparisons }) {
   if (comparisons.length === 0) {
