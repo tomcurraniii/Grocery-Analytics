@@ -53,6 +53,7 @@ const generateComparisons = (query) => {
 export default function Home() {
   const [results, setResults] = useState([]);
   const [comparisons, setComparisons] = useState([]);
+  const [favorites, setFavorites] = useState([]);  
 
   const isFavorited = (item) => favorites.some(f => f.title === item.title && f.store === item.store);
   const handleToggleFavorite = (item) => {
