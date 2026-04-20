@@ -1,5 +1,5 @@
 import './styles/global.css';
-import './App.css';
+import './app.css';
 import Home from './pages/Home';
 
 export default function App() {
