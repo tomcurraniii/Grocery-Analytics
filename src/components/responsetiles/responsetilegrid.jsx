@@ -1,4 +1,4 @@
-import ResponseTile from './ResponseTile';
+import ResponseTile from './responsetile';
 
 export default function ResponseTileGrid({ results, onViewDetails, isFavorited, onToggleFavorite }) {
   if (results.length === 0) {
