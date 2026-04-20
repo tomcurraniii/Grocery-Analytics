@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Header from '../components/Layout/Header';
-import SearchBar from '../components/SearchBar/SearchBar';
-import ResponseTileGrid from '../components/ResponseTiles/ResponseTileGrid';
-import PricingList from '../components/PricingList/PricingList';
+import SearchBar from '../components/searchbar/searchbar';
+import ResponseTileGrid from '../components/responsetiles/responsetilegrid';
+import PricingList from '../components/pricinglist/pricinglist';
 
 // Mock data generator
 const generateMockResults = (query) => {
