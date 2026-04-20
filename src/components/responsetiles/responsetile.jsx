@@ -1,4 +1,4 @@
-import './ResponseTiles.css';
+import './responsetiles.css';
 
 export default function ResponseTile({ title, description, price, store, onViewDetails, isFavorited, onToggleFavorite, rating, reviews }) {
   return (
