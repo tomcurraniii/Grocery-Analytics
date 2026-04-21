@@ -77,7 +77,10 @@ export default function Home() {
       <Header />
       <div className="main-content">
         <div className="content-left">
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar 
+            onSearch={handleSearch} 
+            onSuggestionSelect={handleSearch}
+          />
           <ResponseTileGrid
             results={results}
             onViewDetails={handleViewDetails}        
